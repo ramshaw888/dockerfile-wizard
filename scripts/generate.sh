@@ -25,8 +25,9 @@ make altinstall"
 echo "RUN apt-get update && apt-get -y install lsb-release unzip"
 
 echo "RUN apt-get install -y python-dev"
-# echo "RUN python -m ensurepip --default-pip"
-# echo "RUN pip install --user 'tox>=3.0.0rc4' tox-battery"
+echo "RUN python3 -m ensurepip --default-pip"
+echo "RUN pip3 install --upgrade pip"
+echo "RUN pip3 install 'tox>=3.0.0rc4' tox-battery"
 
 # install bats for testing
 echo "RUN git clone https://github.com/sstephenson/bats.git \
