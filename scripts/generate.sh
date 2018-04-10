@@ -21,6 +21,12 @@ cd Python-$PYTHON_2_VERSION && \
 ./configure && \
 make altinstall"
 
+# install lsb-release, etc., for testing linux distro
+echo "RUN apt-get update && apt-get -y install lsb-release unzip"
+
+echo "RUN apt-get install -y python-dev"
+echo "RUN pip install --user 'tox>=3.0.0rc4' tox-battery"
+
 # install bats for testing
 echo "RUN git clone https://github.com/sstephenson/bats.git \
   && cd bats \
@@ -31,6 +37,3 @@ echo "RUN git clone https://github.com/sstephenson/bats.git \
 # install dependencies for tap-to-junit
 echo "RUN perl -MCPAN -e 'install TAP::Parser'"
 echo "RUN perl -MCPAN -e 'install XML::Generator'"
-
-# install lsb-release, etc., for testing linux distro
-echo "RUN apt-get update && apt-get -y install lsb-release unzip"
