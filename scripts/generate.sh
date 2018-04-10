@@ -1,6 +1,6 @@
 #!/bin/bash
 
-PYTHON_3_VERSION="3.4.6"
+PYTHON_3_VERSION="3.6.4"
 PYTHON_2_VERSION="2.7.14"
 
 echo "FROM buildpack-deps:$(awk -F'_' '{print tolower($2)}' <<< $LINUX_VERSION)"
