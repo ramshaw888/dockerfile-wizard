@@ -12,7 +12,7 @@ tar xzf Python-$PYTHON_3_VERSION.tgz && \
 rm Python-$PYTHON_3_VERSION.tgz && \
 cd Python-$PYTHON_3_VERSION && \
 ./configure && \
-make altinstall"
+make install"
 
 echo "RUN wget https://www.python.org/ftp/python/$PYTHON_2_VERSION/Python-$PYTHON_2_VERSION.tgz && \
 tar xzf Python-$PYTHON_2_VERSION.tgz && \
