@@ -12,14 +12,14 @@ tar xzf Python-$PYTHON_3_VERSION.tgz && \
 rm Python-$PYTHON_3_VERSION.tgz && \
 cd Python-$PYTHON_3_VERSION && \
 ./configure && \
-make install"
+make altinstall"
 
 echo "RUN wget https://www.python.org/ftp/python/$PYTHON_2_VERSION/Python-$PYTHON_2_VERSION.tgz && \
 tar xzf Python-$PYTHON_2_VERSION.tgz && \
 rm Python-$PYTHON_2_VERSION.tgz && \
 cd Python-$PYTHON_2_VERSION && \
 ./configure && \
-make install"
+make altinstall"
 
 # install bats for testing
 echo "RUN git clone https://github.com/sstephenson/bats.git \
